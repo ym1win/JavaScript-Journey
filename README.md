@@ -4,16 +4,17 @@ Welcome to my JavaScript learning journey!
 
 This repository documents my progress through the **FreeCodeCamp JavaScript Certification** course. It showcases my hands-on practice through labs, workshops, and projects as I build a strong foundation in JavaScript and prepare for full-stack development opportunities.
 
-## 🎯 Goals
+## 🎯 Goals  
 
 * Complete the FreeCodeCamp JavaScript Certification
+
 * Master JavaScript fundamentals and core concepts
 * Build practical projects through workshops and labs
 * Develop strong problem-solving skills
 * Prepare for React, full-stack development, and technical interviews
 * Maintain a consistent and active GitHub profile
 
-## 📚 Learning Platform
+## 📚 Learning Platforms
 
 * **FreeCodeCamp – JavaScript Certification**
 
