@@ -154,9 +154,13 @@ typeof (undefined + 5) // "number"
 
 
 Number + Number → Mathematical addition
+
 String + Anything → String concatenation
+
 Anything + String = String concatenation
+
 **JavaScript evaluates + from left to right
+
 1 + 2 + '3'   // "33"
 '1' + 2 + 3   // "123"
 1 + '2' + 3   // "123"
