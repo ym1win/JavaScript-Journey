@@ -354,29 +354,41 @@ Exponentiation is also **right-to-left associative**.
 Summary Table
 Operator	Type Coercion?	Checks	Example	Result
 ==	✅ Yes	Value	5 == "5"	true
+
 ===	❌ No	Value + Type	5 === "5"	false
+
 !=	✅ Yes	Value Inequality	5 != "5"	false
+
 !==	❌ No	Value + Type Inequality	5 !== "5"	true
+
 Best Practice 🚀
 
 ✅ Prefer strict operators:
 
 === (Strict Equality)
+
 !== (Strict Inequality)
 
 Because they:
 
 Avoid unexpected type coercion
+
 Make code more predictable
+
 Are commonly used in professional projects
 
 # JavaScript Unary Operators – Quick Notes
 
 Quick Memory Trick 🚀
+
 + → Make Number
+ 
 - → Make Negative
+ 
 ! → Flip Boolean
+
 ~ → Flip Bits
+
 void → Always undefined   //Common usage:
 
 <a href="javascript:void(0)">Click Me</a>
@@ -389,20 +401,28 @@ typeof → Tell Type
 # Bitwise Operators
 
 &  → BOTH 1
+
 |  → AT LEAST ONE 1
+
 ^  → DIFFERENT BITS
+
 ~  → FLIP ALL BITS
+
 << → left shift formula : n << k = n × 2ᵏ
+
 >> → right shift formmula :n >> k = floor(n / 2ᵏ)
+ 
 
 # conditional statement
 
 The ternary operator is a compact way to write simple if/else statements. It has three parts: a condition, a result if the condition is true, and a result if it is false. Here's the basic syntax:
 
 condition ? expressionIfTrue : expressionIfFalse;
+
 Here's an example dealing with weather temperatures in Celsius:
 
 const temperature = 30;
+
 const weather = temperature > 25 ? 'sunny' : 'cool';
 
 console.log(`It's a ${weather} day!`);
@@ -410,8 +430,11 @@ console.log(`It's a ${weather} day!`);
 # binary logical operators
 
 Easy Memory Trick 🚀
+
 && → "ALL" must be truthy
+
 || → "ANY" truthy value works
+
 ?? → "NULL or UNDEFINED?" Use fallback
 
 
@@ -419,19 +442,25 @@ Easy Memory Trick 🚀
 
 Revision Cheat Sheet 📝
 Math.ceil(x)    // ↑ Up
+
 Math.floor(x)   // ↓ Down
+
 Math.round(x)   // Nearest
+
 Math.trunc(x)   // Remove decimals
 
 Math.min(...)   // Smallest
+
 Math.max(...)   // Largest
 
 Math.sqrt(x)    // √x
+
 Math.cbrt(x)    // ∛x
 
 Math.abs(x)     // Positive value
 
 Math.pow(a,b)   // a^b
+
 Math.random()   // 0 ≤ x < 1
 
 
@@ -442,12 +471,19 @@ parseFloat()
 Converts a string to a floating-point number (decimal number).
 
 parseFloat("3.14")      // 3.14
+
 parseFloat("3.14 abc")  // 3.14
+
 parseFloat("3.14.5")    // 3.14
+
 parseFloat("abc 3.14")  // NaN
+
 Rules:
+
 Starts parsing from the beginning.
-Stops at the first invalid character.
+
+Stops at the first invalid character
+.
 Returns NaN if the string doesn't start with a number.
 
 parseInt()
@@ -455,27 +491,45 @@ parseInt()
 Converts a string to an integer.
 
 parseInt("42")      // 42
+
 parseInt("42px")    // 42
+
 parseInt("3.14")    // 3
+
 parseInt("abc123")  // NaN
+
 Rules:
+
 Starts parsing from the beginning.
+
 Stops at the first non-digit character.
+
 Returns only the integer part.
+
 Returns NaN if the string doesn't start with a number.
+
 Common Behaviors
-Ignores Leading Spaces
+
+Ignores Leading Spaces'
+
 parseFloat("  3.14") // 3.14
+
 parseInt("  42")     // 42
+
 Handles + and - Signs
+
 parseFloat("+3.14") // 3.14
+
 parseInt("-42")     // -42
 
 The .toFixed() method rounds the number to the nearest value that can be represented with the specified number of decimal places. This rounding behavior is important to understand:
 
 console.log((3.14159).toFixed(3));  // "3.142"
+
 console.log((3.14449).toFixed(3));  // "3.144"
+
 console.log((3.14550).toFixed(3));  // "3.146"
+
 As you can see, .toFixed() rounds up when the next digit is 5 or greater, and rounds down otherwise. If you call .toFixed() without arguments, it defaults to 0 decimal places:
 
 switch statements are typically used when you're comparing a single variable against multiple possible values. They're especially useful when you have many potential conditions to check against a single variable. 
