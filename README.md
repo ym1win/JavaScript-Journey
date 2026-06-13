@@ -128,7 +128,7 @@ JavaScript-Journey
 
 ## 📈 Progress
 
-* FreeCodeCamp Steps Completed: **165**
+* FreeCodeCamp Steps Completed: **193**
 * Currently building projects and documenting my learning journey through GitHub.
 
 ## 🚀 Learning Philosophy
