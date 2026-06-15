@@ -1,3 +1,21 @@
+# 📚 Table of Contents
+
+- Arrays in JavaScript
+- push()
+- pop()
+- unshift()
+- shift()
+- Two-Dimensional Arrays
+- Array Destructuring
+- Reverse a String in JavaScript
+- indexOf()
+- splice()
+- includes()
+- Shallow Copy of Arrays
+- The slice() Method
+
+---
+
 # JavaScript Arrays – Quick Notes
 
 ## Arrays in JavaScript
@@ -17,7 +35,7 @@ console.log(fruits); // ["apple", "banana", "cherry", "date"]
 
 ---
 
-# push()
+## push()
 
 The `push()` method is used to add one or more elements to the end of an array. The return value for the `push()` method is the new length of the array. Here's an example of adding a new fruit to the existing fruits array:
 
@@ -32,7 +50,7 @@ console.log(fruits); // ["apple", "banana", "orange"]
 
 ---
 
-# pop()
+## pop()
 
 The next method we will look at is the `pop()` method. The `pop()` method removes the last element from an array and returns that element. It also modifies the original array. Here's how it works:
 
@@ -47,25 +65,25 @@ console.log(lastFruit); // "orange"
 
 ---
 
-# unshift()
+## unshift()
 
 The `unshift()` method adds one or more elements to the beginning of an array and returns its new length. It works similarly to `push()`, but modifies the start of the array instead of the end.
 
 ---
 
-# shift()
+## shift()
 
 The `shift()` method removes the first element from an array and returns that element. It's similar to `pop()`, but it works at the beginning of the array instead of the end.
 
 ---
 
-# Two-Dimensional Arrays
+## Two-Dimensional Arrays
 
 It's worth noting that in JavaScript, two-dimensional arrays are actually arrays of arrays. This means each element of the outer array is itself an array. This nested structure allows for great flexibility but also requires careful handling to avoid errors.
 
 ---
 
-# Array Destructuring
+## Array Destructuring
 
 ## What Is Array Destructuring, and How Does It Work?
 
@@ -144,7 +162,7 @@ Array destructuring is a powerful feature that can make your code more concise a
 
 ---
 
-# Reverse a String in JavaScript
+## Reverse a String in JavaScript
 
 JavaScript using a combination of string and array methods. The process involves three main steps:
 
@@ -154,7 +172,7 @@ JavaScript using a combination of string and array methods. The process involves
 
 Let's explore each of these steps using the `split()`, `reverse()`, and `join()` methods.
 
-## Reverse a String in JavaScript (Short Notes)
+### Reverse a String in JavaScript (Short Notes)
 
 ### Steps to Reverse a String:
 
@@ -199,7 +217,7 @@ Remember that strings in JavaScript are immutable, which means you can't directl
 
 ---
 
-# indexOf()
+## indexOf()
 
 The `indexOf()` method is useful for finding the first index of a specific element within an array. If the element cannot be found, then it will return `-1`. Here is the basic syntax:
 
@@ -244,7 +262,7 @@ array.splice(startIndex, deleteCount, item1, item2, ...)
 
 ## 1️⃣ Remove Elements
 
-```js id="ecjlwm"
+```js
 let fruits = ["apple", "banana", "orange", "mango"];
 
 fruits.splice(2, 1);
@@ -254,7 +272,7 @@ fruits.splice(2, 1);
 
 ### Result:
 
-```js id="2mht09"
+```js
 ["apple", "banana", "mango"]
 ```
 
@@ -262,7 +280,7 @@ fruits.splice(2, 1);
 
 ## 2️⃣ Add Elements
 
-```js id="6dxgx5"
+```js
 let colors = ["red", "green", "blue"];
 
 colors.splice(1, 0, "yellow");
@@ -272,7 +290,7 @@ colors.splice(1, 0, "yellow");
 
 ### Result:
 
-```js id="vrn6r7"
+```js
 ["red", "yellow", "green", "blue"]
 ```
 
@@ -282,7 +300,7 @@ colors.splice(1, 0, "yellow");
 
 ## 3️⃣ Replace Elements (Remove + Add)
 
-```js id="7t95qq"
+```js
 let numbers = [1, 2, 3, 4];
 
 numbers.splice(1, 2, 6, 7);
@@ -292,7 +310,7 @@ numbers.splice(1, 2, 6, 7);
 
 ### Result:
 
-```js id="ftl3b3"
+```js
 [1, 6, 7, 4]
 ```
 
@@ -300,7 +318,7 @@ numbers.splice(1, 2, 6, 7);
 
 ## 4️⃣ Keep Original Array Unchanged
 
-```js id="7ue74u"
+```js
 let copy = [...original];
 
 copy.splice(...);
@@ -312,7 +330,7 @@ copy.splice(...);
 
 ## 5️⃣ Remove Element by Value
 
-```js id="1h0x1l"
+```js
 let index = fruits.indexOf("orange");
 
 if (index !== -1) {
@@ -327,13 +345,13 @@ if (index !== -1) {
 
 ## 6️⃣ Clear Entire Array
 
-```js id="j7j2qv"
+```js
 array.splice(0);
 ```
 
 ### Result:
 
-```js id="ur3s7o"
+```js
 []
 ```
 
@@ -350,35 +368,35 @@ array.splice(0);
 
 ## 🧠 Quick Memory Trick
 
-```js id="4m86w3"
+```js
 splice(start, deleteCount, addItems...)
 ```
 
 Delete only:
 
-```js id="lv7n8m"
+```js
 splice(2, 1)
 ```
 
 Add only:
 
-```js id="ywfgnl"
+```js
 splice(2, 0, "new")
 ```
 
 Replace:
 
-```js id="vznq4m"
+```js
 splice(2, 1, "new")
 ```
 
 ---
 
-# includes()
+## includes()
 
 It's worth noting that `includes()` uses the strict equality comparison (`===`), which means it can distinguish between different types. For example:
 
-```js id="g23fnr"
+```js
 let mixedArray = [1, "2", 3, "4", 5];
 
 console.log(mixedArray.includes(2));   // false
@@ -406,7 +424,7 @@ A shallow copy creates a new array containing the same elements as the original 
 
 ### Primitive Values (Number, String, Boolean)
 
-```js id="wbzgkn"
+```js
 const arr1 = [1, 2, 3];
 
 const arr2 = [...arr1];
@@ -418,7 +436,7 @@ const arr2 = [...arr1];
 
 ### Reference Values (Arrays/Objects)
 
-```js id="ly0i91"
+```js
 const arr1 = [[1, 2], [3, 4]];
 
 const arr2 = [...arr1];
@@ -428,7 +446,7 @@ arr2[0].push(5);
 
 ### Result:
 
-```js id="91qvq4"
+```js
 arr1; // [[1, 2, 5], [3, 4]]
 arr2; // [[1, 2, 5], [3, 4]]
 ```
@@ -441,13 +459,13 @@ arr2; // [[1, 2, 5], [3, 4]]
 
 ## 1️⃣ Using concat()
 
-```js id="j8q4d4"
+```js
 const copy = [].concat(original);
 ```
 
 ### Example:
 
-```js id="5wpv9d"
+```js
 const original = [1, 2, 3];
 
 const copy = [].concat(original);
@@ -459,13 +477,13 @@ const copy = [].concat(original);
 
 ## 2️⃣ Using slice()
 
-```js id="6t72xw"
+```js
 const copy = original.slice();
 ```
 
 ### Example:
 
-```js id="s4oj7g"
+```js
 const original = [1, 2, 3];
 
 const copy = original.slice();
@@ -477,13 +495,13 @@ const copy = original.slice();
 
 ## 3️⃣ Using Spread Operator (...) ⭐ (Most Common)
 
-```js id="j1g4au"
+```js
 const copy = [...original];
 ```
 
 ### Example:
 
-```js id="x53ln9"
+```js
 const original = [1, 2, 3];
 
 const copy = [...original];
@@ -495,7 +513,7 @@ const copy = [...original];
 
 # Independence of Top-Level Array
 
-```js id="b00w4z"
+```js
 const original = [1, 2, 3];
 
 const copy = [...original];
@@ -505,7 +523,7 @@ copy.push(4);
 
 ### Result:
 
-```js id="g4cz8w"
+```js
 original; // [1, 2, 3]
 
 copy;     // [1, 2, 3, 4]
@@ -546,7 +564,7 @@ copy;     // [1, 2, 3, 4]
 Shallow Copy: Outer array copied, inner references shared.
 Deep Copy: Everything copied independently.
 
-# The slice() Method
+## The slice() Method
 
 The `slice()` method is used to extract a portion of an array and return it as a new array without modifying the original array.
 
@@ -554,7 +572,7 @@ The `slice()` method is used to extract a portion of an array and return it as a
 
 ## Syntax
 
-```js id="p16zfa"
+```js
 array.slice(start, end)
 ```
 
@@ -572,7 +590,7 @@ array.slice(start, end)
 
 ## 1. Extract a part of an array
 
-```js id="ml0s9g"
+```js
 let fruits = ["apple", "banana", "orange", "mango"];
 
 let result = fruits.slice(1, 3);
@@ -587,7 +605,7 @@ console.log(fruits); // ["apple", "banana", "orange", "mango"]
 
 ## 2. Create a shallow copy of an array
 
-```js id="df6m5u"
+```js
 let numbers = [1, 2, 3];
 
 let copy = numbers.slice();
@@ -599,7 +617,7 @@ console.log(copy); // [1, 2, 3]
 
 ## 3. Omitting the end parameter
 
-```js id="06x4zn"
+```js
 let arr = [10, 20, 30, 40, 50];
 
 console.log(arr.slice(2)); // [30, 40, 50]
@@ -611,7 +629,7 @@ Starts from index `2` and goes till the end.
 
 ## 4. Using negative indices
 
-```js id="9lj1l1"
+```js
 let arr = [10, 20, 30, 40, 50];
 
 console.log(arr.slice(-2)); // [40, 50]
@@ -653,6 +671,3 @@ splice() → Surgery ✂️ (Changes original)
 ## One-line Definition:
 
 `slice()` extracts elements from an array into a new array without changing the original array.
-
-
-
